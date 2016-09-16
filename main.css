@@ -1,30 +1,68 @@
-.container {}
+body {
+  background-color: #e0f7ef;
+  height: 100vh;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
 
 .calculator {
+  background: #587b9e;
   border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
   margin: 0 auto;
   display: block;
   height: 447px;
   width: 286px;
-  border: 1px solid;
   padding: 20px;
 }
 
 .display-field {
-  width: 100%;
-  height: 60px;
-  background-color: aquamarine;
+  width: 100%;  
+  height: 65px;
+  background-color: #66ecbf;
   margin-bottom: 25px;
   text-align: right;
+  overflow:auto;
+/*  overflow-x: auto;
+  overflow-y:hidden; */
+}
+
+.display,
+.display-sub {
+  font-family: 'Droid Sans Mono', monospace;
 }
 
 .display {
-  font-size: 2.4em;
-  padding: 0 3px;
+/*  line-height: 1; */
+  font-size: 1.835em;
+  padding: 0 3px 0;
   margin: 0;
-/*  font-family: "Iceland", monospace; */
-  font-family: 'Droid Sans Mono', monospace;
-  overflow: hidden;
+/*  overflow:scroll; */
+}
+
+.display-sub {
+  font-size: .85em;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: left;
+  padding-left: 3px;
 }
 
 .button-field {
@@ -34,10 +72,15 @@
 }
 
 button {
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  color: #173048;
+  background: antiquewhite;
   float: left;
   cursor: pointer;
   padding: 0;
-  font-size: 2em;
+  font-size: 1.75em;
   width: 61px;
   height: 61px;
   margin: 0 14px 14px 0;
@@ -48,6 +91,11 @@ button:active,
 button:visited,
 button:focus {
   outline: transparent;
+}
+
+.clear {
+  color: #fff;
+  background-color: #ff7393;
 }
 
 button:nth-child(4n+4) {
@@ -61,4 +109,20 @@ button:nth-child(3) {
 .plus {
   height: 136px;
   float: right;
+}
+
+@media (max-width:500px) {
+  body {
+    margin: 0;
+  }
+  .calculator {
+    height: 410px;
+    width: 262px;
+  }
+  button {
+    margin: 0 6px 6px 0;
+  }
+  .plus {
+    height: 128px;
+  }
 }
