@@ -35,13 +35,11 @@ body {
 
 .display-field {
   width: 100%;  
-  height: 65px;
+  height: 70px;
   background-color: #66ecbf;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   text-align: right;
   overflow:auto;
-/*  overflow-x: auto;
-  overflow-y:hidden; */
 }
 
 .display,
@@ -50,7 +48,7 @@ body {
 }
 
 .display {
-/*  line-height: 1; */
+  line-height: 1;
   font-size: 1.835em;
   padding: 0 3px 0;
   margin: 0;
